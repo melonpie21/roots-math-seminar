@@ -263,7 +263,7 @@
       }
       
       .section {
-        padding-block: clamp(5.5rem, 10vw, 9rem);
+        padding-block: clamp(4.5rem, 7vw, 7rem);
         border-top: 1px solid var(--line);
       }
       
@@ -315,19 +315,30 @@
       
       .about-grid {
         display: grid;
-        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-        gap: clamp(3rem, 8vw, 9rem);
+        grid-template-columns: 1fr;
+        gap: 2rem;
       }
       
       .about-grid h3 {
+        max-width: 900px;
         margin-bottom: 0;
         color: var(--maroon);
-        font-size: clamp(2.1rem, 3.7vw, 4rem);
+        font-size: clamp(2.1rem, 4vw, 4.5rem);
       }
       
       .about-grid p {
         color: var(--muted);
         font-size: 1.08rem;
+      }
+      
+      .about-grid > div {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem clamp(2rem, 6vw, 6rem);
+      }
+      
+      .about-grid > div > p {
+        margin-bottom: 0;
       }
       
       .section-kicker {
@@ -350,16 +361,28 @@
       }
       
       .seminar-glance {
-        margin-top: 2.5rem;
+        grid-column: 1 / -1;
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
       }
       
       .seminar-glance div {
-        padding: 0.95rem 0;
+        padding: 1rem 1.25rem;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        border-bottom: 1px solid var(--line);
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+        border-right: 1px solid var(--line);
+      }
+      
+      .seminar-glance div:first-child {
+        padding-left: 0;
+      }
+      
+      .seminar-glance div:last-child {
+        border-right: 0;
       }
       
       .seminar-glance strong,
@@ -400,8 +423,8 @@
       }
       
       .speaker-grid article {
-        min-height: 300px;
-        padding: 1.4rem;
+        min-height: 0;
+        padding: 1.5rem 1.4rem 1.8rem;
         display: flex;
         flex-direction: column;
         border-right: 1px solid var(--line);
@@ -416,7 +439,7 @@
       }
       
       .speaker-grid span {
-        margin-bottom: auto;
+        margin-bottom: 2.5rem;
         color: var(--orange);
         font-size: 0.74rem;
         font-weight: 900;
@@ -770,7 +793,7 @@
         }
       
         .section {
-          padding-block: 5rem;
+          padding-block: 3.75rem;
         }
       
         .acronym {
@@ -821,8 +844,8 @@
       
         .speaker-grid article,
         .speaker-grid article:first-child {
-          min-height: 225px;
-          padding: 1.4rem 0;
+          min-height: 0;
+          padding: 1.4rem 0 1.8rem;
           border-right: 0;
           border-top: 1px solid var(--line);
         }
@@ -832,7 +855,7 @@
         }
       
         .speaker-grid span {
-          margin-bottom: 4rem;
+          margin-bottom: 1.5rem;
         }
       
         .talks {
@@ -884,8 +907,19 @@
         }
       
         .seminar-glance div {
-          grid-template-columns: 1fr;
+          padding-inline: 0;
           gap: 0.15rem;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+      
+        .seminar-glance div:last-child {
+          border-bottom: 0;
+        }
+      
+        .about-grid > div,
+        .seminar-glance {
+          grid-template-columns: 1fr;
         }
       
         .participate {
