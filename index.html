@@ -331,6 +331,71 @@
         font-size: 1.08rem;
       }
       
+      .simple-heading {
+        max-width: 820px;
+        margin-bottom: 2.3rem;
+      }
+      
+      .simple-heading h2 {
+        margin-bottom: 0;
+        font-size: clamp(2.8rem, 5vw, 5rem);
+      }
+      
+      .about-copy {
+        max-width: 980px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem clamp(2rem, 6vw, 5rem);
+      }
+      
+      .about-copy p {
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+      
+      .about-copy .roots-expansion {
+        grid-column: 1 / -1;
+        padding-bottom: 1.4rem;
+        border-bottom: 1px solid var(--line);
+        color: var(--maroon-dark);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.35rem, 2.2vw, 2rem);
+        line-height: 1.35;
+      }
+      
+      .about-points {
+        margin-top: 2.7rem;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border-top: 1px solid var(--maroon);
+        border-bottom: 1px solid var(--maroon);
+      }
+      
+      .about-points div {
+        padding: 1.15rem 1.4rem;
+        display: grid;
+        gap: 0.15rem;
+        border-right: 1px solid var(--line);
+      }
+      
+      .about-points div:first-child {
+        padding-left: 0;
+      }
+      
+      .about-points div:last-child {
+        border-right: 0;
+      }
+      
+      .about-points strong {
+        color: var(--maroon-dark);
+      }
+      
+      .about-points span {
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+      
       .about-grid > div {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -503,6 +568,107 @@
       
       .compact-kicker {
         margin-bottom: 2rem;
+      }
+      
+      .talks {
+        display: block;
+      }
+      
+      .program-notice {
+        max-width: 980px;
+        padding: clamp(2rem, 5vw, 4rem);
+        background: var(--paper);
+        border-left: 7px solid var(--orange);
+      }
+      
+      .program-notice h2 {
+        max-width: 780px;
+        font-size: clamp(2.8rem, 5vw, 5.2rem);
+      }
+      
+      .program-notice > p:last-child {
+        max-width: 720px;
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+      
+      .people-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+      
+      .person-card {
+        min-height: 330px;
+        padding: clamp(1.6rem, 3vw, 2.5rem);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--line);
+        background: var(--paper);
+      }
+      
+      .founder-card {
+        border-top: 7px solid var(--orange);
+      }
+      
+      .team-card {
+        border-top: 7px solid var(--maroon);
+      }
+      
+      .person-role {
+        margin-bottom: 2.2rem;
+        color: var(--orange);
+        font-size: 0.75rem;
+        font-weight: 900;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+      
+      .team-card .person-role {
+        color: var(--maroon);
+      }
+      
+      .person-card h3 {
+        margin-bottom: 0.9rem;
+        color: var(--maroon-dark);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.7rem, 3vw, 2.6rem);
+        font-weight: 500;
+        line-height: 1.1;
+      }
+      
+      .person-card > p:not(.person-role) {
+        max-width: 580px;
+        color: var(--muted);
+      }
+      
+      .person-links {
+        margin-top: auto;
+        padding-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem 1.4rem;
+        border-top: 1px solid var(--line);
+      }
+      
+      .person-links a {
+        color: var(--maroon);
+        font-weight: 800;
+        text-decoration: none;
+      }
+      
+      .person-links a:hover,
+      .person-links a:focus-visible {
+        text-decoration: underline;
+      }
+      
+      .team-note {
+        margin-top: auto;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--line);
+        font-size: 0.88rem;
+        font-style: italic;
       }
       
       .approach {
@@ -826,11 +992,46 @@
         }
       
         .about-grid,
+        .about-copy,
+        .about-points,
         .split-heading,
         .talks,
         .feature-grid,
-        .approach {
+        .approach,
+        .people-grid {
           grid-template-columns: 1fr;
+        }
+      
+        .simple-heading h2,
+        .program-notice h2 {
+          font-size: clamp(2.6rem, 13vw, 4.2rem);
+        }
+      
+        .about-copy {
+          gap: 1rem;
+        }
+      
+        .about-copy .roots-expansion {
+          grid-column: 1;
+        }
+      
+        .about-points div,
+        .about-points div:first-child {
+          padding: 0.9rem 0;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+      
+        .about-points div:last-child {
+          border-bottom: 0;
+        }
+      
+        .program-notice {
+          padding: 1.6rem;
+        }
+      
+        .person-card {
+          min-height: 0;
         }
       
         .split-heading {
@@ -970,8 +1171,8 @@
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#talks">Talks</a>
+        <a href="#people">People</a>
         <a href="#participate">Participate</a>
-        <a class="nav-button" href="#talks">Upcoming talks</a>
       </nav>
     </header>
 
@@ -1001,109 +1202,37 @@
       </section>
 
       <section class="definition section" id="about">
-        <div class="section-heading">
-          <p class="eyebrow"><span></span> What ROOTS stands for</p>
-          <h2>A name with a purpose.</h2>
+        <div class="simple-heading">
+          <p class="eyebrow"><span></span> About ROOTS</p>
+          <h2>Research beyond the syllabus.</h2>
         </div>
 
-        <div class="acronym" aria-label="Research Opportunities and Outlook Talks for Students">
-          <article>
-            <strong>R</strong>
-            <span>Research</span>
-          </article>
-          <article>
-            <strong>O</strong>
-            <span>Opportunities</span>
-          </article>
-          <article>
-            <strong>O</strong>
-            <span>Outlook</span>
-          </article>
-          <article>
-            <strong>T</strong>
-            <span>Talks for</span>
-          </article>
-          <article>
-            <strong>S</strong>
-            <span>Students</span>
-          </article>
-        </div>
-
-        <div class="section-kicker">
-          <span>About ROOTS</span>
-          <strong>01</strong>
-        </div>
-        <div class="about-grid">
-          <h3>Mathematics beyond the syllabus.</h3>
-          <div>
-            <p>
-              ROOTS is a student-centered seminar created to expose
-              undergraduates to research and happenings in higher mathematics
-              at an accessible level.
-            </p>
-            <p>
-              The seminar welcomes students from mathematics, CMDA, computer
-              science, engineering, and any other field where curiosity leads
-              to mathematical questions. Talks may come from faculty, graduate
-              students, professionals in industry, or undergraduates themselves.
-            </p>
-
-            <div class="seminar-glance" aria-label="Seminar at a glance">
-              <div><strong>Every 2–4 weeks</strong><span>Biweekly or monthly</span></div>
-              <div><strong>Broadly accessible</strong><span>Ideas before prerequisites</span></div>
-              <div><strong>Open across majors</strong><span>One mathematical community</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="speakers section" aria-labelledby="speakers-title">
-        <div class="section-kicker">
-          <span>Who speaks?</span>
-          <strong>02</strong>
-        </div>
-        <div class="section-heading split-heading">
-          <h2 id="speakers-title">Different paths.<br />A shared language.</h2>
+        <div class="about-copy">
+          <p class="roots-expansion">
+            <strong>ROOTS</strong> stands for <strong>Research Opportunities and
+            Outlook Talks for Students.</strong>
+          </p>
           <p>
-            ROOTS invites speakers from across mathematics and beyond, with an
-            emphasis on talks that welcome students from varied backgrounds.
+            ROOTS is an undergraduate mathematics seminar at Virginia Tech that
+            introduces students to research and developments in higher
+            mathematics through accessible, engaging talks.
+          </p>
+          <p>
+            Students from mathematics, CMDA, computer science, engineering, and
+            related fields are welcome. Speakers may include faculty, graduate
+            students, professionals in industry, and undergraduates themselves.
           </p>
         </div>
 
-        <div class="speaker-grid">
-          <article>
-            <span>01</span>
-            <h3>Faculty</h3>
-            <p>A welcoming look inside active research areas and the questions that drive them.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Graduate students</h3>
-            <p>A first-hand view of research, graduate study, and finding a mathematical direction.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Industry</h3>
-            <p>How mathematical thinking moves from the classroom into technology, data, and practice.</p>
-          </article>
-          <article>
-            <span>04</span>
-            <h3>Undergraduates</h3>
-            <p>Student projects, discoveries, and experiences—shared with students by students.</p>
-          </article>
+        <div class="about-points" aria-label="Seminar at a glance">
+          <div><strong>Every 2–4 weeks</strong><span>Biweekly or monthly</span></div>
+          <div><strong>Accessible talks</strong><span>Ideas before prerequisites</span></div>
+          <div><strong>Open across majors</strong><span>One mathematical community</span></div>
         </div>
       </section>
 
       <section class="talks section" id="talks">
-        <div class="talks-graphic" aria-hidden="true">
-          <span>ROOTS</span>
-          <strong>∞</strong>
-        </div>
-        <div class="talks-copy">
-          <div class="section-kicker compact-kicker">
-            <span>Upcoming talks</span>
-            <strong>03</strong>
-          </div>
+        <div class="program-notice">
           <p class="eyebrow"><span></span> Program in development</p>
           <h2>Our first talks are taking shape.</h2>
           <p>
@@ -1113,26 +1242,42 @@
         </div>
       </section>
 
-      <section class="approach section" aria-labelledby="approach-title">
-        <div class="section-kicker">
-          <span>The ROOTS approach</span>
-          <strong>04</strong>
+      <section class="people section" id="people" aria-labelledby="people-title">
+        <div class="simple-heading">
+          <p class="eyebrow"><span></span> People</p>
+          <h2 id="people-title">The team behind ROOTS.</h2>
         </div>
-        <p class="equation" aria-hidden="true">question → idea → connection</p>
-        <h2 id="approach-title">A good talk opens a door.</h2>
-        <ol class="principles">
-          <li><span>01</span>Start from ideas, not prerequisites.</li>
-          <li><span>02</span>Show why the question is interesting.</li>
-          <li><span>03</span>Leave room for curiosity and conversation.</li>
-        </ol>
+
+        <div class="people-grid">
+          <article class="person-card founder-card">
+            <p class="person-role">Founder &amp; Faculty Lead</p>
+            <h3>Mirjeta Pasha, Ph.D.</h3>
+            <p>Assistant Professor, Department of Mathematics, Virginia Tech</p>
+            <p>
+              ROOTS began as Dr. Pasha’s grant-supported initiative to broaden
+              undergraduate access to research and higher mathematics.
+            </p>
+            <div class="person-links">
+              <a href="https://sites.google.com/view/mirjeta-pasha/home">Personal website <span aria-hidden="true">↗</span></a>
+              <a href="https://math.vt.edu/people/faculty/pasha-mirjeta.html">Virginia Tech profile <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="person-card team-card">
+            <p class="person-role">Organizing Team</p>
+            <h3>Student organizers &amp; Math Club collaborators</h3>
+            <p>
+              Graduate and undergraduate students help select topics, coordinate
+              speakers, and connect the seminar with students across Virginia Tech.
+            </p>
+            <p class="team-note">Individual organizer names can be added as the team is confirmed.</p>
+          </article>
+        </div>
       </section>
 
       <section class="participate section" id="participate">
         <div>
-          <div class="section-kicker light-kicker">
-            <span>Participate</span>
-            <strong>05</strong>
-          </div>
+          <p class="eyebrow eyebrow-light"><span></span> Participate</p>
           <h2>Bring a question.<br />Share an idea.</h2>
         </div>
         <div class="participate-copy">
@@ -1155,8 +1300,7 @@
         <strong>ROOTS.</strong>
         <span>Research Opportunities and Outlook Talks for Students<br />An undergraduate mathematics seminar at Virginia Tech</span>
       </div>
-      <p>Faculty advisor<br /><strong>Mirjeta Pasha</strong></p>
+      <p>Founded by<br /><strong>Mirjeta Pasha, Ph.D.</strong></p>
     </footer>
   </body>
 </html>
-
