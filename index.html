@@ -663,6 +663,21 @@
         text-decoration: underline;
       }
       
+      .organizer-list {
+        margin: 0.35rem 0 1.4rem;
+        padding: 0;
+        list-style: none;
+        border-top: 1px solid var(--line);
+      }
+      
+      .organizer-list li {
+        padding: 0.7rem 0;
+        border-bottom: 1px solid var(--line);
+        color: var(--maroon-dark);
+        font-size: 1.08rem;
+        font-weight: 800;
+      }
+      
       .team-note {
         margin-top: auto;
         padding-top: 1.5rem;
@@ -789,6 +804,24 @@
         margin-bottom: 2rem;
         color: #eadde1;
         font-size: 1.08rem;
+      }
+      
+      .speaker-form-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.8rem;
+        padding: 1rem 1.2rem;
+        background: var(--orange);
+        color: var(--ink);
+        font-weight: 900;
+        text-decoration: none;
+      }
+      
+      .speaker-form-link:hover,
+      .speaker-form-link:focus-visible {
+        background: #ffb57f;
       }
       
       .resource-links {
@@ -1265,12 +1298,17 @@
 
           <article class="person-card team-card">
             <p class="person-role">Organizing Team</p>
-            <h3>Student organizers &amp; Math Club collaborators</h3>
-            <p>
-              Graduate and undergraduate students help select topics, coordinate
-              speakers, and connect the seminar with students across Virginia Tech.
+            <h3>Organizers</h3>
+            <ul class="organizer-list" aria-label="ROOTS organizers">
+              <li>Yash Agarwal</li>
+              <li>Nart Shalqini</li>
+              <li>Mirjeta Pasha</li>
+              <li>Matthew Delaney</li>
+            </ul>
+            <p class="team-note">
+              The organizing team selects topics, coordinates speakers, and
+              connects the seminar with students across Virginia Tech.
             </p>
-            <p class="team-note">Individual organizer names can be added as the team is confirmed.</p>
           </article>
         </div>
       </section>
@@ -1282,10 +1320,17 @@
         </div>
         <div class="participate-copy">
           <p>
-            Interested in giving a talk, recommending a speaker, or helping
-            shape the program? Reach out to the ROOTS organizing team or the
-            Virginia Tech Math Club board.
+            Interested in giving a talk? Complete the speaker interest form.
+            You can also recommend a speaker or help shape the program by
+            reaching out to the ROOTS organizing team or the Virginia Tech Math
+            Club board.
           </p>
+          <a
+            class="speaker-form-link"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScAHLBXJZy66kPWlkZyqilmBu1CE1t-8eZU9GJTVZaeCaaRWw/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Volunteer to give a ROOTS talk <span aria-hidden="true">↗</span></a>
           <div class="resource-links" aria-label="Virginia Tech mathematics resources">
             <a href="https://www.math.vt.edu/index.html">VT Mathematics <span aria-hidden="true">↗</span></a>
             <a href="https://seminar.math.vt.edu/mathclub/">VT Math Club <span aria-hidden="true">↗</span></a>
