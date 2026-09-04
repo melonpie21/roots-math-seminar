@@ -643,11 +643,26 @@
       }
       
       .organizer-list li {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1.5rem;
         padding: 0.7rem 0;
         border-bottom: 1px solid var(--line);
+      }
+      
+      .organizer-name {
         color: var(--maroon-dark);
         font-size: 1.08rem;
         font-weight: 800;
+      }
+      
+      .organizer-role {
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 750;
+        letter-spacing: 0.03em;
+        text-align: right;
       }
       
       .team-note {
@@ -1061,7 +1076,17 @@
         .person-card {
           min-height: 0;
         }
-      
+
+        .organizer-list li {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 0.2rem;
+        }
+
+        .organizer-role {
+          text-align: left;
+        }
+
         .split-heading {
           align-items: start;
           gap: 1.5rem;
@@ -1285,10 +1310,10 @@
             <p class="person-role">ROOTS</p>
             <h3>Founding Team</h3>
             <ul class="organizer-list" aria-label="ROOTS founding team">
-              <li>Yash Agarwal</li>
-              <li>Nart Shalqini</li>
-              <li>Mirjeta Pasha</li>
-              <li>Matthew Delaney</li>
+              <li><span class="organizer-name">Yash Agarwal</span><span class="organizer-role">Undergraduate Student</span></li>
+              <li><span class="organizer-name">Nart Shalqini</span><span class="organizer-role">Graduate Student</span></li>
+              <li><span class="organizer-name">Mirjeta Pasha, Ph.D.</span><span class="organizer-role">Faculty Adviser</span></li>
+              <li><span class="organizer-name">Matthew Delaney</span><span class="organizer-role">Undergraduate Student</span></li>
             </ul>
             <p class="team-note">
               The organizing team selects topics, coordinates speakers, and
