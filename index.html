@@ -580,6 +580,25 @@
         background: var(--paper);
         border-left: 7px solid var(--orange);
       }
+
+      .next-talk-notice {
+        max-width: 980px;
+        padding: clamp(2rem, 4vw, 3.5rem);
+        border-left: 7px solid var(--orange);
+        background: var(--maroon);
+        color: white;
+      }
+
+      .next-talk-notice .eyebrow {
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .next-talk-notice h2 {
+        max-width: 780px;
+        margin-bottom: 0;
+        color: white;
+        font-size: clamp(2.5rem, 4.8vw, 4.8rem);
+      }
       
       .program-notice h2 {
         max-width: 880px;
@@ -1501,6 +1520,11 @@
       </section>
 
       <section class="talks section" id="talks">
+        <article class="next-talk-notice" aria-labelledby="next-talk-title">
+          <p class="eyebrow"><span></span> Coming soon</p>
+          <h2 id="next-talk-title">Stay tuned for our next talk.</h2>
+        </article>
+
         <div class="past-talks" aria-labelledby="past-talks-title">
           <div class="past-talks-heading">
             <p class="eyebrow"><span></span> Archive</p>
